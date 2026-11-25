@@ -1,11 +1,10 @@
+// One Line, One Laugh — alien-observer one-liner.
+// Setup: clapping when a plane lands. Turn (last clause): the alien
+// reframes the sky as rented property. Punchline lands at the very end.
 import { mkdirSync, writeFileSync } from "node:fs";
 
-const OUT_DIR = "/output";
-const OUT_FILE = `${OUT_DIR}/entry.txt`;
+const line =
+  "An alien on Flight 212 asked why we clap when the plane lands; I said to thank the pilot, and he whispered, 'So the sky has a landlord.'";
 
-const LINE =
-  "The museum guard followed me for an hour. " +
-  "I was the only visitor. He said it was 'just protocol.' I felt famous.";
-
-mkdirSync(OUT_DIR, { recursive: true });
-writeFileSync(OUT_FILE, LINE);
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", line, "utf8");
